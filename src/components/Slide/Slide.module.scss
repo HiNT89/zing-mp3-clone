@@ -1,0 +1,128 @@
+.slide_wrapper {
+    width: 100%;
+    height: 162px;
+    display: flex;
+    position: relative;
+    &:hover .slide_btnControl {
+        display: flex;
+    }
+}
+.slide_content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 29px 0px;
+    //item
+    .slide_item {
+        width: calc(33% - 29px);
+    }
+}
+.slide_item > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+// animation next
+
+.slide_item.nextSlide:first-child {
+    animation: fistItem linear 1 0.5s backwards;
+    z-index: 1;
+}
+.slide_item.nextSlide:nth-child(2) {
+    animation: secondItem linear 1 0.5s backwards;
+    z-index: 1;
+}
+.slide_item.nextSlide:nth-child(3) {
+    animation: lastItem linear 1 0.5s backwards;
+    position: relative;
+    z-index: 1;
+}
+// animation prev
+
+.slide_item.prevSlide:first-child {
+    animation: fistItemPrev linear 1 0.5s backwards;
+    z-index: 1;
+}
+.slide_item.prevSlide:nth-child(2) {
+    animation: secondItemPrev linear 1 0.5s backwards;
+    z-index: 1;
+}
+.slide_item.prevSlide:nth-child(3) {
+    animation: lastItemPrev linear 1 0.5s backwards;
+    position: relative;
+    z-index: 1;
+}
+.slide_btnControl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    > button {
+        width: 55px;
+        height: 55px;
+        color: #fff;
+        border-radius: 50%;
+        border: none;
+        font-size: 3rem;
+        background-color: hsla(0, 0%, 100%, 0.15);
+        box-shadow: 0 2px 4px 0 rgb(226 102 102 / 15%);
+    }
+}
+@keyframes fistItem {
+    from {
+        transform: translateX(calc(100% + 29px));
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes secondItem {
+    from {
+        transform: translateX(calc(100% + 29px));
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes lastItem {
+    from {
+        transform: translateX(calc(-100% - 29px));
+        z-index: -1;
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+// prev
+@keyframes fistItemPrev {
+    from {
+        transform: translateX(calc(100% + 29px));
+        z-index: -1;
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes secondItemPrev {
+    from {
+        transform: translateX(calc(-100% - 29px));
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes lastItemPrev {
+    from {
+        transform: translateX(calc(-100% - 29px));
+        z-index: -1;
+    }
+    to {
+        transform: translateX(0);
+    }
+}

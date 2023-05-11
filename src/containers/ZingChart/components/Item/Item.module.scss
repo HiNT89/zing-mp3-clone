@@ -1,0 +1,110 @@
+.wrapper {
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 4px;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+    align-items: center;
+    display: flex;
+    text-align: left;
+    cursor: pointer;
+}
+.wrapper:hover {
+    background-color: hsla(0, 0%, 100%, 0.3);
+    .bxh_item_img_btn {
+        display: block;
+    }
+    .bxh_item_heart {
+        display: inline;
+    }
+}
+
+.bxh_item_stt {
+    width: 10%;
+
+    opacity: 1;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(74, 144, 226, 0);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bxh_item_brick {
+    width: 5%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.bxh_item_data {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    gap: 0px 15px;
+    .bxh_item_img {
+        width: 60px;
+        position: relative;
+        > img {
+            width: 60px;
+            height: 60px;
+            border-radius: 4px;
+        }
+    }
+    .bxh_item_info {
+        flex-grow: 1;
+        > h4 {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            color: #fff;
+            text-transform: capitalize;
+        }
+        > span {
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            color: #ccc;
+            text-transform: capitalize;
+        }
+    }
+}
+.bxh_item_album {
+    width: 20%;
+    color: hsla(0, 0%, 100%, 0.5);
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.bxh_item_img_btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    border-radius: 4px;
+    height: 60px;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    background-color: rgba(54, 25, 14, 0.5);
+    &:hover {
+        color: #fff !important;
+    }
+}
+.bxh_item_count {
+    width: 20%;
+    text-align: right;
+    > span {
+        margin-right: 8px;
+        margin-left: 20px;
+        min-width: 60px;
+        display: inline-block;
+    }
+    .bxh_item_heart {
+        display: none;
+    }
+    .bxh_item_heart_active {
+        // color: rgb(59, 104, 239);
+        display: inline;
+    }
+}

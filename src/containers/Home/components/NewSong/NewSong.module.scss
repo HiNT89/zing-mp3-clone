@@ -1,0 +1,98 @@
+.NewSong {
+    margin-top: 20px;
+    width: 100%;
+    .NewSong_top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        text-transform: capitalize;
+        > a {
+            text-decoration: none;
+            color: #ccc;
+        }
+    }
+}
+.NewSong_bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px 10px;
+    .NewSong_bottom_item {
+        width: calc(33% - 20px);
+        display: flex;
+        gap: 0px 10px;
+        background-color: hsla(0, 0%, 100%, 0.1);
+        border-radius: 8px;
+        padding: 14px;
+    }
+}
+.NewSong_bottom_img {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    &:hover > div {
+        display: flex;
+    }
+    > img {
+        width: 120px;
+        height: 120px;
+        border-radius: 4px;
+    }
+    > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+    }
+}
+.NewSong_bottom_info {
+    text-transform: capitalize;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    span {
+        color: #ccc;
+    }
+}
+.NewSong_bottom_info_top {
+    display: flex;
+    flex-direction: column;
+
+    > span {
+        margin-top: 10px;
+        font-size: 1.2rem;
+    }
+}
+.NewSong_bottom_info_bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    > h2 {
+        opacity: 0.4;
+        -webkit-text-stroke: 1px #fff;
+        font-size: 40px;
+        font-weight: 900;
+        color: transparent;
+        line-height: 1;
+    }
+    > span {
+        font-size: 1.2rem;
+    }
+}
+.NewSong_bottom_btn {
+    border: none;
+    background-color: transparent;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > svg {
+        color: #ccc;
+    }
+}

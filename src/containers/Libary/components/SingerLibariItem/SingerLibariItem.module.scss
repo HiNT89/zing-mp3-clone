@@ -1,0 +1,35 @@
+.wrapper {
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap : 10px 0px;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+    }
+    span {
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+    }
+}
+.wrapper.btn {
+    > div {
+        width: 130px;
+        height: 130px;
+        border: 1px solid #ccc;
+        background-color: transparent;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        > svg {
+            font-size: 4.5rem;
+            color: #fff;
+        }
+    }
+}

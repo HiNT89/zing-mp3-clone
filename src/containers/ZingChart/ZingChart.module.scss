@@ -1,0 +1,22 @@
+.list {
+    display: flex;
+    flex-direction: column;
+}
+.btn {
+    max-width: 150px;
+    text-transform: capitalize;
+    border-radius: 16px;
+    color: #fff;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    &:hover {
+        background-color: hsla(0, 0%, 100%, 0.1) !important;
+        border-color: #fff !important;
+        color: #fff !important;
+    }
+}
+.content {
+    margin-top: 20px;
+}

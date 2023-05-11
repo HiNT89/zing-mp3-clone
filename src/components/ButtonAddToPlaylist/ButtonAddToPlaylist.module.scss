@@ -1,0 +1,44 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.iconAdd {
+    cursor: pointer;
+    position: relative;
+    &:hover .list_BtnAdd {
+        display: block;
+    }
+}
+.list_BtnAdd {
+    display: none;
+    position: absolute;
+    background-color: red;
+    z-index: 99;
+    top: -100px;
+    right: 0;
+    transform: translateX(100%);
+    // background-color: #203d65;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+    height: 200px;
+    overflow: auto;
+    padding: 8px;
+    Button {
+        background-color: transparent;
+        width: 100%;
+        border: none;
+        color: #fff;
+        text-transform: capitalize;
+        text-align: left;
+      
+    }
+}
+.list_BtnAdd.list_BtnAdd_right {
+    transform: translateX(-10%) !important;
+}
+.wrapper button svg {
+    margin-right: 6px;
+    color: #2ae164;
+}

@@ -1,0 +1,89 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.wrapper:hover {
+    background-color: hsla(0, 0%, 100%, 0.3);
+    .leftImg > div {
+        display: flex;
+    }
+    .rightBtn > svg {
+        display: block;
+    }
+}
+.wrapper.active {
+    // background-color: #3b68ef;
+    .leftImg > div {
+        display: flex;
+    }
+}
+.wrapper.disable {
+    opacity: 0.7;
+}
+.textSmall {
+    font-size: 1.2rem;
+    color: hsla(0, 0%, 100%, 0.5);
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.left {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 0px 8px;
+    .leftImg > img {
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+    }
+    h4 {
+        font-size: 1.4rem;
+        color: #fff;
+        text-transform: capitalize;
+        font-weight: 500;
+    }
+}
+.leftImg {
+    position: relative;
+    > div {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+.right {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > span {
+        margin-left: 20px;
+    }
+    .rightBtn.active svg {
+        color: rgb(59, 104, 239);
+    }
+}
+.rightBtn > svg {
+    display: none;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.wrapper.active {
+    .rightBtn.active svg {
+        color: rgb(255, 255, 255);
+    }
+}

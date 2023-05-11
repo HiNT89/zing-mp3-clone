@@ -1,0 +1,81 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    gap: 10px 0px;
+}
+.newSongCategory_item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0px 8px;
+    position: relative;
+    > img {
+        width: 52px;
+        height: 52px;
+        border-radius: 4px;
+    }
+    .newSongCategory_item_info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        text-transform: capitalize;
+        font-size: 1.4rem;
+        justify-content: center;
+        gap: 10px 0px;
+        > span {
+            color: #ccc;
+            font-size: 1.2rem;
+        }
+    }
+    &:hover .newSongCategory_item_before {
+        display: flex;
+    }
+    .newSongCategory_item_before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: none;
+        padding: 0px 10px;
+        align-items: center;
+    }
+}
+.newSongCategory_item_btn {
+    background-color: transparent;
+    position: absolute;
+    border: none;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0;
+    svg {
+        color: #ccc;
+        font-size: 1.8rem;
+    }
+}
+.newSongCategory_item_btn:nth-child(2) {
+    right: 80px;
+}
+.newSongCategory_item_btn:last-child {
+    right: 20px;
+}
+.newSongCategory_item_btn.active svg {
+    color: rgb(30, 82, 236);
+}
+.wrapper {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.emty_title {
+    text-transform: capitalize;
+    color: #de1717;
+}

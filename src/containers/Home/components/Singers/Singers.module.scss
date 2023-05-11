@@ -1,0 +1,9 @@
+.Singers {
+    display: flex;
+    > a {
+        width: calc(100% / 6);
+        > img {
+            width: 100%;
+        }
+    }
+}

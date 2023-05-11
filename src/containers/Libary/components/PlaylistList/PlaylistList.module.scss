@@ -1,0 +1,42 @@
+.wrapper {
+    width: 100%;
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 0px;
+        > button {
+            background-color: transparent;
+            border: none;
+            text-transform: capitalize;
+            color : rgba($color: #fff, $alpha: 0.5);
+            > svg {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+.top > div {
+    display: flex;
+    gap: 0px 10px;
+    > h2 {
+        text-transform: capitalize;
+    }
+    > button {
+        background-color: rgba($color: #fff, $alpha: 0.5);
+        color: #fff;
+        font-size: 1.6rem;
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap : 14px;
+}

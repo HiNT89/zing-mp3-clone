@@ -1,0 +1,124 @@
+// newSongCategory
+.wrapper {
+    margin-top: 15px;
+    .top {
+        display: flex;
+        justify-content: space-between;
+        .top_btn {
+            background-color: transparent;
+            border: none;
+            text-transform: capitalize;
+            color: rgba($color: #fff, $alpha: 0.5);
+            text-decoration: none;
+            > svg {
+                margin-left: 10px;
+            }
+        }
+    }
+    .top_title {
+        text-transform: capitalize;
+        color: #fff;
+        margin-bottom: 12px;
+    }
+    .filters {
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+}
+.filter {
+    padding: 4px 24px;
+    border-radius: 100px;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-right: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid ;
+    color: #fff;
+}
+.filter.active {
+    // background-color: #3b68ef;
+    // border-color: #3b68ef;
+    &:hover {
+        background-color: #1e52ec;
+        color: #fff;
+    }
+}
+.list {
+    display: flex;
+    // flex-direction: column;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    gap: 0px 8px;
+    position: relative;
+    padding: 10px;
+    > img {
+        width: 60px;
+        height: 60px;
+        border-radius: 4px;
+    }
+    .item_info {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        text-transform: capitalize;
+        font-size: 1.4rem;
+        justify-content: space-between;
+        > span {
+            color: #ccc;
+            font-size: 1.2rem;
+        }
+    }
+    &:hover .item_before {
+        display: flex;
+    }
+    .item_before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: hsla(0, 0%, 100%, 0.1);
+        display: none;
+        justify-content: space-between;
+        padding: 0px 20px;
+        align-items: center;
+        border-radius: 8px;
+        > div {
+            display: flex;
+        }
+    }
+}
+.item:hover img {
+    opacity: 0.5;
+}
+.item_btn {
+    border: none;
+    background-color: transparent;
+    svg {
+        font-size: 2rem;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    &:hover svg {
+        color: rgba(255, 255, 255, 1);
+    }
+}
+.item_btn_active {
+    border: none;
+    background-color: transparent;
+    svg {
+        font-size: 2rem;
+        // color: #4096ff;
+    }
+    &:hover svg {
+        // color: #4096ff;
+    }
+}

@@ -1,0 +1,115 @@
+/* song play */
+.songPlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 90px;
+    background-color: rgba(23, 47, 79);
+    display: flex;
+    z-index: 10000;
+}
+.songPlay_info,
+.songPlay_list {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.songPlay_info > img {
+    width: 64px;
+    height: 64px;
+    border: none;
+    border-radius: 8px;
+}
+.songPlay_info_name {
+    text-transform: capitalize;
+}
+.songPlay_info_name > span {
+    font-size: 1rem;
+    color: #ccc;
+}
+.songPlay_controls {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.songPlay_controls_time {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+        min-width: 60px;
+    }
+}
+.songPlay_control {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+}
+.songPlay_control_active {
+    border: none;
+    background-color: transparent;
+    color: rgb(30, 82, 236);
+}
+/* progress */
+.progress {
+    width: 70%;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #a0a0a0;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+.progress::-webkit-slider-thumb:hover {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: rgb(0, 255, 81) !important;
+    border-radius: 4px;
+    cursor: pointer;
+}
+// volume
+.songPlay_volume {
+    width: 20%;
+    border-radius: 4px;
+    // -webkit-appearance: none;
+    height: 6px;
+    background: #dbcaca;
+    outline: none;
+    opacity: 1;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    accent-color: #fff;
+}
+.nextSong {
+    position: absolute;
+    top: -20px;
+    right: 0;
+}
+.btn_heart {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+.btn_heart_active {
+    color: rgb(30, 82, 236);
+    background-color: transparent;
+    border: none;
+}
