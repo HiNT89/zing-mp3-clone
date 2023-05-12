@@ -16,20 +16,6 @@ function HeaderContent({
     handleUpdateUser,
 }) {
     const [isOpenTheme, setIsOpenTheme] = useState(false);
-    // const listTheme = [
-    //     {
-    //         name: 'blue',
-    //     },
-    //     {
-    //         name: 'pink',
-    //     },
-    //     {
-    //         name: 'blue',
-    //     },
-    //     {
-    //         name: 'pink',
-    //     },
-    // ];
     return (
         <div className={clsx(style.content_top)}>
             <div>
@@ -59,6 +45,7 @@ function HeaderContent({
                     handleChangeSong={handleChangeSong}
                     handleAddSongToList={handleAddSongToList}
                     dataTheme={dataTheme}
+                    handleUpdateUser = {handleUpdateUser}
                 />
             </div>
             {/* ------------------------------ */}

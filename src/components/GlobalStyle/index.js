@@ -47,11 +47,7 @@ function GlobalStyle({ children }) {
     const user = useSelector(dataUser);
     const dataListSong = useSelector(listSong);
     const dataToast = useSelector(toast);
-    // state
-    // const [listOptionModal, setListOptionModal] = useState({
-    //     repeat: false,
-    //     random: false,
-    // });
+
     const [dataTheme, setDataTheme] = useState('blue');
     const [typeListPlay, setTypeListPlay] = useState(1); // 1 : danh sach phat , 0 : nghe gan day
     const [listPlayByType, setListPLayByType] = useState([]);
@@ -169,7 +165,6 @@ function GlobalStyle({ children }) {
         };
         const newPlaylists = await handleUpdate();
         const newUser = { ...user, playlists: newPlaylists };
-        console.log(newUser);
         await dispatch(updateUser(newUser));
         navigate(`/libary`);
     };
@@ -229,7 +224,38 @@ function GlobalStyle({ children }) {
                         let newListSong;
                         if (confident) {
                             newListSong = [...playlist.listSong, songID];
+                        } else {
+                            newListSong = playlist.listSong.filter(
+                                (it) => it !== songID,
+                            );
                         }
+                        return user.playlists.map((it) =>
+                            it.name === playlistName
+                                ? { ...it, listSong: newListSong }
+                                : it,
+                        );
+                    };
+                    const newPlaylists = await handleUpdate();
+                    newUser = {
+                        ...user,
+                        playlists: newPlaylists,
+                    };
+                }
+                break;
+            case 'deleteSongPlaylists':
+                {
+                    console.log(option.arrID)
+                    const { arrID, playlistName } = option;
+
+                    const handleUpdate = () => {
+                        const playlist = user.playlists.filter(
+                            (it) => it.name === playlistName,
+                        )[0];
+
+                        let newListSong = playlist.listSong.filter(
+                            (it) => !arrID.includes(it),
+                        );
+                        console.log(newListSong);
                         return user.playlists.map((it) =>
                             it.name === playlistName
                                 ? { ...it, listSong: newListSong }

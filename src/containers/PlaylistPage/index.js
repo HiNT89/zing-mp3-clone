@@ -53,7 +53,6 @@ function PlaylistPage() {
             setArrSong(newListSong);
         }
     }, [sort]);
-    console.log(arrSong);
     return (
         <div className={clsx(styles.wrapper)}>
             <div className={clsx(styles.left)}>
@@ -113,6 +112,7 @@ function PlaylistPage() {
                         <i className="fa-solid fa-arrow-up-a-z"></i>{' '}
                         <span> từ z - a</span>
                     </Button>
+                    
                 </div>
                 <SongList listSongLibary={arrSong} title={'bài hát'} />
             </div>

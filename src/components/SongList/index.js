@@ -74,16 +74,26 @@ function SongList({ listSongLibary, title }) {
                             checked={checkAll}
                             onChange={() => setCheckAll(!checkAll)}
                         />
-                        <Button onClick={handleAddListSongToList}>
+                        <Button  onClick={handleAddListSongToList}>
                             thêm vào danh sách phát
                         </Button>
+                        
                     </div>
                 ) : (
                     <span>bài hát</span>
                 )}
 
-                <span>album</span>
-                <span></span>
+                <span style={{marginLeft : '20px' ,display : 'block'}}>album</span>
+                {listChecked.length ? (
+                    <div className={clsx(style.checkAll)}>
+                        {/* <Button  onClick={() => handleUpdateUser({arrID : listChecked,playlistName : },"deleteSongPlaylists")}>
+                            xoa
+                        </Button> */}
+                        
+                    </div>
+                ) : (
+                    <span></span>
+                )}
             </div>
             {listSongLibary.map((it) => {
                 const itemSong = dataListSong.filter(

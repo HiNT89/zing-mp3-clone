@@ -87,6 +87,7 @@ function Search({ handleChangeSong, handleAddSongToList, dataTheme }) {
                         handleAddSongToList={handleAddSongToList}
                         isEmtySearch={emtySearch}
                         isLoading={isLoading}
+                        dataTheme = {dataTheme}
                     />
                 </div>
             )}
