@@ -17,7 +17,14 @@ function Playlist({ playlist }) {
             <div className={clsx(style.top)}>
                 <div>
                     <h2 className={clsx(style.title)}>playlist</h2>
-                    <Button onClick={handleToggleCreatePlaylistModal}>
+                    <Button
+                        onClick={handleToggleCreatePlaylistModal}
+                        styles={{
+                            svg: {
+                                backgroundColor: 'transparent',
+                            },
+                        }}
+                    >
                         <i className="fa-solid fa-plus"></i>
                     </Button>
                 </div>

@@ -244,7 +244,7 @@ function GlobalStyle({ children }) {
                 break;
             case 'deleteSongPlaylists':
                 {
-                    console.log(option.arrID)
+                    console.log(option.arrID);
                     const { arrID, playlistName } = option;
 
                     const handleUpdate = () => {
@@ -495,7 +495,20 @@ function GlobalStyle({ children }) {
                 confirmLoading={confirmLoading}
                 onCancel={handleCancel}
                 className={clsx(style.modal_wrapper)}
-                style={{ backgroundColor: `${dataTheme.bgModal}` }}
+                style={{
+                    backgroundColor: `${dataTheme.bgModal}`,
+                    borderRadius: '8px',
+                    // '& .ant-btn-primary': {
+                    //     backgroundColor: `${dataTheme.bgModal} !important`,
+                    // },
+                }}
+                okText="Xác nhận"
+                cancelText="Hủy"
+                okButtonProps={{
+                    style: {
+                        backgroundColor: `${dataTheme.bgColorBtn}`,
+                    },
+                }}
             >
                 <h3 className={clsx(style.modal_title)}>Tạo playlist mới</h3>
                 <input

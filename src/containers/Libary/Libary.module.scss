@@ -2,13 +2,12 @@
     padding: 50px 0px;
     display: flex;
     flex-direction: column;
-    gap : 50px 0px;
+    gap: 50px 0px;
     > h1 {
         text-transform: capitalize;
-        
+
         > svg {
-            color: rgb(64, 152, 245);
+            color: #fff;
         }
     }
-
 }

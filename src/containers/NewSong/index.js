@@ -12,7 +12,7 @@ function NewSong() {
     const [lisSongCategory, setListSongCategory] = useState([]);
     const listSongData = useSelector(listSong);
     const user = useSelector(dataUser);
-    const { handleAddSongToList } = useContext(Global);
+    const { handleAddSongToList,dataTheme } = useContext(Global);
     useEffect(() => {
         if (type === 'all') {
             const newListSong = listSongData
@@ -39,7 +39,7 @@ function NewSong() {
             setListSongCategory(newLisSongCategory);
         }
     }, [type]);
-    console.log(lisSongCategory);
+    console.log(type)
     return (
         <div className={clsx(style.wrapper)}>
             <h1>
@@ -48,6 +48,7 @@ function NewSong() {
             <SongList
                 listSongLibary={lisSongCategory}
                 title={'bài hát mới nhất'}
+                dataTheme={dataTheme}
             />
         </div>
     );

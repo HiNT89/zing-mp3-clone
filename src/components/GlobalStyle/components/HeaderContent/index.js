@@ -20,7 +20,7 @@ function HeaderContent({
         <div className={clsx(style.content_top)}>
             <div>
                 {/* ---------- controls */}
-                <div className={clsx(style.content_top_controls)}>
+                {/* <div className={clsx(style.content_top_controls)}>
                     <Button
                         className={clsx(
                             style.content_top_control,
@@ -39,7 +39,7 @@ function HeaderContent({
                     >
                         <i className="fa-solid fa-arrow-right"></i>
                     </Button>
-                </div>
+                </div> */}
                 {/* ---------- search */}
                 <Search
                     handleChangeSong={handleChangeSong}

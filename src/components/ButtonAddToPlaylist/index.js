@@ -9,6 +9,7 @@ function ButtonAddToPlaylist({
     isItemLastRow,
     dataTheme,
 }) {
+    console.log(song)
     return (
         <div className={clsx(styles.wrapper)}>
             <div className={clsx(styles.iconAdd)}>
